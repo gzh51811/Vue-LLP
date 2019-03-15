@@ -3,16 +3,19 @@
      <router-view class="main"></router-view>
   <footer>
     <nav>
-      <li v-for="(nav) in navs" :key="nav.name" @click="goto(nav)">{{nav.text}}</li>
+      <li v-for="(nav) in navs" :key="nav.name" @click="goto(nav)">
+        <i :class="nav.i"></i>
+        <span>{{nav.text}}</span>
+        </li>
     </nav>
   </footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from "./components/HelloWorld.vue";
-import Vue from "vue";
+// import Vue from "vue";
 import "element-ui/lib/theme-chalk/index.css";
+// import "assets/download/font_7ckfk617pvd/iconfont.css";
 
 export default {
   data() {
@@ -20,18 +23,22 @@ export default {
       navs: [
         {
           text: "首页",
+          i: "iconfont icon-shouye",
           name: "Home"
         },
         {
           text: "选购",
+          i: "iconfont icon-liebiaoxuanze-",
           name: "Xuan"
         },
         {
           text: "购物车",
+          i: "iconfont icon-gouwuche",
           name: "Cart"
         },
         {
           text: "我的",
+          i: "iconfont icon-wode",
           name: "Login"
         }
       ],
@@ -83,6 +90,12 @@ body {
         text-align: center;
         flex: 1;
         color: #a7a7a7;
+        i{
+           font-size: .626667rem;
+        }
+        span{
+          font-size: .24rem;
+        }
       }
     }
   }
