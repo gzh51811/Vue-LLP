@@ -1,28 +1,90 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+     <router-view class="main"></router-view>
+  <footer>
+    <nav>
+      <li v-for="(nav) in navs" :key="nav.name" @click="goto(nav)">{{nav.text}}</li>
+    </nav>
+  </footer>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HelloWorld from "./components/HelloWorld.vue";
+import Vue from "vue";
+import "element-ui/lib/theme-chalk/index.css";
 
 export default {
-  name: 'app',
-  components: {
-    HelloWorld
+  data() {
+    return {
+      navs: [
+        {
+          text: "首页",
+          name: "Home"
+        },
+        {
+          text: "选购",
+          name: "Xuan"
+        },
+        {
+          text: "购物车",
+          name: "Cart"
+        },
+        {
+          text: "我的",
+          name: "Login"
+        }
+      ],
+      activeIndex: 0
+    };
+  },
+  components: {},
+  methods: {
+    //点击时切换页面  路由
+    goto(nav) {
+      // console.log(this);
+      //$router.push方法切换组件页面
+      this.$router.push({ name: nav.name });
+    }
   }
-}
+};
 </script>
 
-<style>
+<style lang="scss">
+* {
+  margin: 0;
+  padding: 0;
+}
+html,
+body {
+  height: 100%;
+}
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  .main {
+    flex: 1;
+    flex-direction: column;
+    overflow: auto;
+  }
+  footer {
+    background: pink;
+    height: 1.333333rem;
+    nav {
+      height: 1.333333rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      li {
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        flex: 1;
+        color: #a7a7a7;
+      }
+    }
+  }
 }
 </style>
