@@ -1,4 +1,4 @@
-# lmvue
+# vueproject
 
 ## Project setup
 ```
