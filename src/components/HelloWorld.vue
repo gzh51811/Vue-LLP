@@ -1,4 +1,11 @@
 <template>
+<<<<<<< HEAD
+=======
+  <div class="hello">
+    <p>{{ msg }}</p>
+  </div>
+</template>
+>>>>>>> 7d1efae37eda9581eb0212f471696d50446b4081
 
     <div class="goodimg">
         <i class="star"><img src="../img/star.png"></i>
