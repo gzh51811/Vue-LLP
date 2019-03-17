@@ -14,8 +14,10 @@
 
 <script>
 // import Vue from "vue";
-import "element-ui/lib/theme-chalk/index.css";
-// import "assets/download/font_7ckfk617pvd/iconfont.css";
+// import Vant from "vant";
+
+// import "vant/lib/index.css";
+// Vue.use(Vant);
 
 export default {
   data() {
