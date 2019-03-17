@@ -23,8 +23,15 @@ import Vue from "vue";
 import "element-ui/lib/theme-chalk/index.css";
 =======
 // import Vue from "vue";
+<<<<<<< HEAD
 import "element-ui/lib/theme-chalk/index.css";
 // import "assets/download/font_7ckfk617pvd/iconfont.css";
+>>>>>>> fenzhi2
+=======
+// import Vant from "vant";
+
+// import "vant/lib/index.css";
+// Vue.use(Vant);
 >>>>>>> fenzhi2
 
 export default {
