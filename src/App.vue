@@ -1,5 +1,9 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+=======
      <router-view class="main"></router-view>
   <footer>
     <nav>
@@ -13,10 +17,20 @@
 >>>>>>> fenzhi2
     </nav>
   </footer>
+>>>>>>> 7d1efae37eda9581eb0212f471696d50446b4081
   </div>
 </template>
 
 <script>
+<<<<<<< HEAD
+import HelloWorld from "./components/HelloWorld.vue";
+
+
+export default {
+  name: "app",
+  components: {
+    HelloWorld
+=======
 <<<<<<< HEAD
 import HelloWorld from "./components/HelloWorld.vue";
 import Vue from "vue";
@@ -82,15 +96,29 @@ export default {
       //$router.push方法切换组件页面
       this.$router.push({ name: nav.name });
     }
+>>>>>>> 7d1efae37eda9581eb0212f471696d50446b4081
   }
 };
 </script>
 
+<<<<<<< HEAD
+<style>
+=======
 <style lang="scss">
+>>>>>>> 7d1efae37eda9581eb0212f471696d50446b4081
 * {
   margin: 0;
   padding: 0;
 }
+<<<<<<< HEAD
+#app {
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
+
+=======
 html,
 body {
   height: 100%;
@@ -131,5 +159,6 @@ body {
       }
     }
   }
+>>>>>>> 7d1efae37eda9581eb0212f471696d50446b4081
 }
 </style>
