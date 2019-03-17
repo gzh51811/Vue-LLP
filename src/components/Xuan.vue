@@ -178,11 +178,12 @@
   </div>
 </template>
 <script>
-export default {};
+export default {
+
+};
 </script>
 <style lang="scss" scoped>
 .B_box {
-    height: 100%;
     display: flex;
     box-sizing: border-box;
     img {
@@ -196,7 +197,7 @@ export default {};
     .item-left {
       float: left;
       width: 2.133333rem;
-      height: 11.333333rem;
+      
       padding: 0 0.4rem 0 0.533333333333333rem;
       .main-item {
         width: 100%;
