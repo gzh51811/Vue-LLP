@@ -3,7 +3,7 @@
        <div class="bigtop">
             <!-- 顶部 -->
         <div class="sou">
-            <van-icon name="search" color= "rgba(0, 0, 0, 1)" size=".653333rem" style=" margin: 8px 0 0 8px"/>
+            <van-icon @click="sou" name="search" color= "rgba(0, 0, 0, 1)" size=".653333rem" style=" margin: 8px 0 0 8px"/>
             <van-icon @click="gotocart" name="shopping-cart-o" color= "rgba(0, 0, 0, 1)" size=".653333rem" style="float: right; margin: 8px 8px 0 0;"/>
         </div>
         <!-- 手动轮播 -->
@@ -23,8 +23,8 @@
            <div class="a_content">
                <div class="a_con">
                    <div class="aitems">
-                       <div class="a_item" v-for="(aitem,idx) in arrivals"  :key="idx">
-                       <img :src="aitem.arimgs" alt="">
+                       <div class="a_item" @click="gotogoods(aitem.id)" v-for="(aitem) in listgoods"  :key="aitem.id">
+                       <img :src="aitem.featureImage" alt="">
                        <p>{{aitem.name}}</p>
                       </div>
                    </div>
@@ -52,7 +52,6 @@
        <div class="foot">
            <img :src="fotimg" alt="">
        </div>
-<!--  -->
      </div>
 </template>
 <script>
@@ -72,28 +71,6 @@ export default {
         require("../assets/banrun/235477e9e1a05bdc55ebf7b88b026f84.jpg"),
         require("../assets/banrun/b19c2bc0796cdbe30ec56a0625c9635d.jpg"),
         require("../assets/banrun/c534a78bfdcc088284f3cacedf17c851.jpg")
-      ],
-      arrivals: [
-        {
-          name: "THE BEAST",
-          arimgs: require("../assets/goodrun/20180913195139278273.png@4e_0o_0l_345h_330w_90q.jpg")
-        },
-        {
-          name: "JEWELVARY",
-          arimgs: require("../assets/goodrun/20190312155416678626.jpg@4e_0o_0l_345h_330w_90q.jpg")
-        },
-        {
-          name: "Olfactive Studio",
-          arimgs: require("../assets/goodrun/20190312155558283508.jpg@4e_0o_0l_345h_330w_90q.jpg")
-        },
-        {
-          name: "Karen Mabon",
-          arimgs: require("../assets/goodrun/20190313111258631980.jpg@4e_0o_0l_345h_330w_90q.jpg")
-        },
-        {
-          name: "The Beautools",
-          arimgs: require("../assets/goodrun/20190314151847244021.jpg@4e_0o_0l_345h_330w_90q.jpg")
-        }
       ],
       ticket_img: require("../assets/69c1c3a193c7b53d0b0de1b97561b717.jpg"),
       cilcen: [
@@ -175,17 +152,34 @@ export default {
         require("../assets/d7275cf4bcfc62a5fab460ecd5c68a19.jpg@0o_0l_750w_90q.jpg"),
         require("../assets/c9e8398df7d9be8d5c07a93554e35b4f.jpg@0o_0l_750w_90q.jpg")
       ],
-      fotimg: require("../assets/19b3af48d4f1fe9f4eb85ad4a1f9bc30.jpg@0o_0l_750w_90q.jpg")
+      fotimg: require("../assets/19b3af48d4f1fe9f4eb85ad4a1f9bc30.jpg@0o_0l_750w_90q.jpg"),
+      listgoods:{}
     };
   },
   methods: {
     onChange(index) {
       this.current = index;
     },
+    sou() {
+      this.$router.push("/xuan");
+    },
     gotocart() {
       this.$router.push("/cart");
     }
+    ,
+    gotogoods(id){
+      this.$router.push({name:'Goods',query:{id},params:{id}});
+    }
+  },
+  created(){
+    this.$axios.post("http://localhost:1817/listers",{
+       title: "推荐"
+    })
+     .then(res => {
+        this.listgoods=res.data.arr;
+    });
   }
+
 };
 </script>
 <style lang="scss" scoped>
@@ -248,11 +242,11 @@ export default {
         text-align: center;
         .a_item {
           display: inline-block;
-          width: 2.933333333333333rem;
+          width: 3.8rem;
           margin-right: 0.053333333333333rem;
           overflow: hidden;
           img {
-            width: 100%;
+            width: 3.333333rem;
             height: 3.066667rem;
           }
         }
