@@ -75,7 +75,7 @@ export default {
       ],
       arrivals: [
         {
-          name: "JEWELVARY",
+          name: "THE BEAST",
           arimgs: require("../assets/goodrun/20180913195139278273.png@4e_0o_0l_345h_330w_90q.jpg")
         },
         {
@@ -83,15 +83,15 @@ export default {
           arimgs: require("../assets/goodrun/20190312155416678626.jpg@4e_0o_0l_345h_330w_90q.jpg")
         },
         {
-          name: "JEWELVARY",
+          name: "Olfactive Studio",
           arimgs: require("../assets/goodrun/20190312155558283508.jpg@4e_0o_0l_345h_330w_90q.jpg")
         },
         {
-          name: "JEWELVARY",
+          name: "Karen Mabon",
           arimgs: require("../assets/goodrun/20190313111258631980.jpg@4e_0o_0l_345h_330w_90q.jpg")
         },
         {
-          name: "JEWELVARY",
+          name: "The Beautools",
           arimgs: require("../assets/goodrun/20190314151847244021.jpg@4e_0o_0l_345h_330w_90q.jpg")
         }
       ],
