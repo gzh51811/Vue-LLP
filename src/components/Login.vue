@@ -45,7 +45,12 @@
                     <el-form-item prop="checkPass">
                       <input type="password" v-model="ruleForm2.checkPass" placeholder="请确认密码">
                     </el-form-item>
+                    <el-form-item prop="picVerification">
+                          <input type="text" placeholder="请输入验证码"  class="verification_input" v-model="picVerification" /> 
+                          <input type="button" @click="createdCode" class="verification" v-model="checkCode" /> 
+                    </el-form-item>
                 </el-form>
+                
                      <input class="btn" type="button" value="注册" v-loading.fullscreen.lock="fullscreenLoading"  @click="register">
               </van-tab>
             </van-tabs>
@@ -75,6 +80,9 @@ export default {
       }
     };
     return {
+      code: "",
+      checkCode: "",
+      picVerification: "",
       fullscreenLoading: false,
       ruleForm: {
         username: "",
@@ -84,7 +92,7 @@ export default {
       ruleForm2: {
         username: "",
         password: "",
-        checkPass: ""
+        checkPass: "",
       },
 
       rules: {
@@ -117,17 +125,36 @@ export default {
       active: 0
     };
   },
+   created(){
+    this.createdCode()
+  },
   methods: {
-    // openFullScreen() {
-
-    //   },
+    createdCode(){
+      // 先清空验证码输入
+      this.code = ""
+      this.checkCode = ""
+      this.picVerification = ""
+      // 验证码长度
+      const codeLength = 4
+      // 随机数
+      const random = new Array(0,1,2,3,4,5,6,7,8,9,'A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U','V','W','X','Y','Z','z','x','c','v','b','n','m','a','s','d','f','g','h','j','k','l','q','w','e','r','t','y','u','i','o','p')
+      for(let i = 0;i < codeLength;i++){
+        // 取得随机数的索引(0~35)
+        let index = Math.floor(Math.random() * 62)
+        // 根据索引取得随机数加到code上
+        this.code += random[index]
+      }
+      // 把code值赋给验证码
+      this.checkCode = this.code
+      // console.log(this.checkCode);
+    },
     login() {
       this.$refs.ruleForm.validate(valid => {
-        this.fullscreenLoading = true;
-        setTimeout(() => {
-          this.fullscreenLoading = false;
-        }, 2000);
         if (valid) {
+          this.fullscreenLoading = true;
+          setTimeout(() => {
+            this.fullscreenLoading = false;
+          }, 2000);
           //注意使用axios之前 下载并挂再原型上，方便在每个页面上使用使用this.$axios
           this.$axios
             .post("http://localhost:1817/login", {
@@ -158,11 +185,12 @@ export default {
     },
     register() {
       this.$refs.ruleForm2.validate(valid => {
-        this.fullscreenLoading = true;
-        setTimeout(() => {
-          this.fullscreenLoading = false;
-        }, 2000);
         if (valid) {
+          if(this.checkCode==this.picVerification){
+          this.fullscreenLoading = true;
+          setTimeout(() => {
+            this.fullscreenLoading = false;
+          }, 2000);
           this.$axios
             .post("http://localhost:1817/registry", {
               //请求路径 方式post
@@ -189,6 +217,10 @@ export default {
                 }
               }
             });
+          }
+          else {
+            alert('验证码有误请重新输入');
+          }
         }
       });
     }
@@ -213,17 +245,20 @@ export default {
 }
 .input {
   padding: 0.293333rem 0.4rem 0 0.4rem;
-  height: 10.806667rem;
+  // height: 10.806667rem;
+  height: 14.806667rem;
   input {
-    padding: 0.266667rem 0.133333rem 0.266667rem 0.133333rem !important;
+    padding: 0.266667rem 0.233333rem 0.266667rem 0.233333rem !important;
     height: 1.333333rem !important;
     width: 100%;
     box-sizing: border-box !important;
-    margin-top: 0.633333rem !important;
-    margin-bottom: 0.666667rem !important;
+    margin-top: 0.3rem;
+    margin-bottom: 0.3rem !important;
     font-size: 0.346667rem !important;
+    border: 0.013333rem solid #ccc !important;
   }
   .btn {
+    margin-top: 1.5rem;
     background: chocolate;
     border: none;
     font-size: 0.373333rem;
@@ -238,5 +273,33 @@ export default {
   a {
     color: black;
   }
+}
+.verification_input{
+  font-family: 'Exo 2',sans-serif;
+  border: 1px solid #fff;
+  color: black;
+  outline: none;
+  border-radius: 12px;
+  letter-spacing: 1px;
+  font-size: 17px;
+  font-weight: normal;
+  background-color: #fff;
+  padding: 5px 0 5px 10px;
+  height: 30px;
+  margin-top: 25px;
+  border: 1px solid #e6e6e6;
+  width: 4.5rem !important;
+}
+.verification{
+  border-radius: 12px;
+  width: 3rem !important;
+  letter-spacing: 5px;
+  height: 40px;
+  margin-left: 1.7rem;
+  transform: translate(-15px,0);
+}
+.captcha{
+  height:50px;
+  text-align: justify;
 }
 </style>
