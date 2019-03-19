@@ -4,17 +4,17 @@
             <!-- 顶部 -->
         <div class="sou">
             <van-icon name="search" color= "rgba(0, 0, 0, 1)" size=".653333rem" style=" margin: 8px 0 0 8px"/>
-            <van-icon name="shopping-cart-o" color= "rgba(0, 0, 0, 1)" size=".653333rem" style="float: right; margin: 8px 8px 0 0;"/>
+            <van-icon @click="gotocart" name="shopping-cart-o" color= "rgba(0, 0, 0, 1)" size=".653333rem" style="float: right; margin: 8px 8px 0 0;"/>
         </div>
         <!-- 手动轮播 -->
         <van-swipe @change="onChange" class="van_s">
         <van-swipe-item v-for="(item,idx) in imgs" :key="idx">
             <img class="Img" :src="item" alt="">
-            </van-swipe-item>
+        </van-swipe-item>
         </van-swipe>
         <!-- 图片加载数量 -->
        <div  class="custom-indicator" slot="indicator">
-         {{ current + 1 }}/4
+         <span>{{ current + 1 }}</span>/4
        </div>
        </div>
        <!-- NEW ARRIVAL -->
@@ -57,7 +57,6 @@
 </template>
 <script>
 import Vue from "vue";
-import Vant from "vant";
 import "vant/lib/index.css";
 import { Swipe, SwipeItem } from "vant";
 Vue.use(Swipe).use(SwipeItem);
@@ -176,12 +175,15 @@ export default {
         require("../assets/d7275cf4bcfc62a5fab460ecd5c68a19.jpg@0o_0l_750w_90q.jpg"),
         require("../assets/c9e8398df7d9be8d5c07a93554e35b4f.jpg@0o_0l_750w_90q.jpg")
       ],
-      fotimg:require("../assets/19b3af48d4f1fe9f4eb85ad4a1f9bc30.jpg@0o_0l_750w_90q.jpg")
+      fotimg: require("../assets/19b3af48d4f1fe9f4eb85ad4a1f9bc30.jpg@0o_0l_750w_90q.jpg")
     };
   },
   methods: {
     onChange(index) {
       this.current = index;
+    },
+    gotocart() {
+      this.$router.push("/cart");
     }
   }
 };
@@ -199,7 +201,6 @@ export default {
 }
 .van_s {
   height: 13.333333rem;
-
   .van-swipe-item {
     width: 100%;
     height: 100%;
@@ -211,10 +212,14 @@ export default {
 }
 .custom-indicator {
   position: relative;
-  top: -50px;
-  right: -85%;
+  top: -90px;
+  right: -86%;
   width: 80px;
   color: #fff;
+  font-weight: bold;
+  span{
+    font-size: .6rem;
+  }
 }
 .arrival {
   height: 4.853333rem;
@@ -281,35 +286,35 @@ export default {
       position: absolute;
       z-index: 2;
       top: 0;
-      p{
-          font-size: .4rem;
-          color: #fff;
-          font-weight: bold;
+      p {
+        font-size: 0.4rem;
+        color: #fff;
+        font-weight: bold;
       }
-      span{
-          width: .266667rem;
-          height: .4rem;
-          background: #fff;
-          display: inline-block;
-          position: absolute;
-          top:40px;
-          left: 0;
+      span {
+        width: 0.266667rem;
+        height: 0.4rem;
+        background: #fff;
+        display: inline-block;
+        position: absolute;
+        top: 40px;
+        left: 0;
       }
     }
   }
 }
 .brand {
   overflow: hidden;
-  img{
-      width: 100%;
+  img {
+    width: 100%;
   }
 }
-.foot{
+.foot {
+  width: 100%;
+  overflow: hidden;
+  img {
     width: 100%;
-    overflow: hidden;
-    img{
-       width: 100%;
-    }
+  }
 }
 </style>
 

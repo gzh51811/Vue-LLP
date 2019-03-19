@@ -1,6 +1,8 @@
 <template>
   <div id="app">
-     <router-view class="main"></router-view>
+     <router-view class="main">
+       
+     </router-view>
   <footer>
     <nav>
       <li v-for="(nav) in navs" :key="nav.name" @click="goto(nav)">
@@ -18,6 +20,18 @@
 
 // import "vant/lib/index.css";
 // Vue.use(Vant);
+
+import Vue from 'vue';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+// ElementUI以插件的形式来扩展Vue的功能
+Vue.use(ElementUI);
+import VueResource from "vue-resource";
+Vue.use(VueResource);
+import axios from "axios";
+
+// 把axios设置到Vue的原型对象上，方便在任意组件中使用
+Vue.prototype.$axios = axios;
 
 export default {
   data() {
@@ -79,7 +93,7 @@ body {
     overflow: auto;
   }
   footer {
-    background: pink;
+    background: #fff;
     height: 1.333333rem;
     nav {
       height: 1.333333rem;
@@ -92,11 +106,11 @@ body {
         text-align: center;
         flex: 1;
         color: #a7a7a7;
-        i{
-           font-size: .626667rem;
+        i {
+          font-size: 0.626667rem;
         }
-        span{
-          font-size: .24rem;
+        span {
+          font-size: 0.24rem;
         }
       }
     }
