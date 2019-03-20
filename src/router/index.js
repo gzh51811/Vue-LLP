@@ -3,18 +3,20 @@
  * * 表面：根据hash值的改变来渲染不同的组件
  * * 底层：根据window的hashchange事件来相应不同的组件
  */
+//import Axios from 'axios'
+//import VueAxios from 'vue-axios'
+//import AV from 'leancloud-storage'
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-
 import Home from '../components/Home.vue'
 import Xuan from '../components/Xuan.vue'
 import Goods from '../components/Goods.vue'
 import Cart from '../components/Cart.vue'
 import NotFound from '../components/NotFound.vue'
 import Login from '../components/Login.vue'
+import List from '../components/List.vue'
 
 Vue.use(VueRouter);
-
 let router = new VueRouter({
     // mode:'history',
     routes: [
@@ -32,6 +34,11 @@ let router = new VueRouter({
             name: 'Xuan',
             path: '/xuan',
             component: Xuan
+        },
+        {
+            name: 'List',
+            path: '/list',
+            component: List,
         },
         {
             name: 'Cart',
@@ -103,5 +110,6 @@ router.beforeEach((to, from, next) => {
 
 
 });
+
 
 export default router;

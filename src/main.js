@@ -5,6 +5,7 @@ import flexible from 'lib-flexible'
 // import 'lib-flexible/flexible.js'
 Vue.use(flexible)
 
+
 Vue.config.productionTip = false
 
 new Vue({
