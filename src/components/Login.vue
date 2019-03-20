@@ -156,8 +156,7 @@ export default {
             this.fullscreenLoading = false;
           }, 2000);
           //注意使用axios之前 下载并挂再原型上，方便在每个页面上使用使用this.$axios
-          this.$axios
-            .post("http://localhost:1817/login", {
+          this.$axios.post("http://localhost:1817/login", {
               //请求路径 方式post
               params: {
                 //请求参数
@@ -191,8 +190,7 @@ export default {
           setTimeout(() => {
             this.fullscreenLoading = false;
           }, 2000);
-          this.$axios
-            .post("http://localhost:1817/registry", {
+          this.$axios.post("http://localhost:1817/registry", {
               //请求路径 方式post
               params: {
                 //请求参数

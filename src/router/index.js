@@ -13,7 +13,7 @@ import Cart from '../components/Cart.vue'
 import NotFound from '../components/NotFound.vue'
 import Login from '../components/Login.vue'
 import Aianding from "../components/Aianding.vue";
-import Discover from "../components/discover.vue";
+// import Discover from "../components/discover.vue";
 
 Vue.use(VueRouter);
 
@@ -75,12 +75,12 @@ let router = new VueRouter({
                 }
             }
         },
+        // {
+        //     name: 'Discover',
+        //     path: '/discover',
+        //     component: Discover,
+        // },
         //登陆后
-        {
-            name: 'Discover',
-            path: '/discover',
-            component: Discover,
-        },
         {
             name: 'Aianding',
             path: '/aianding',
