@@ -8,11 +8,17 @@ import 'element-ui/lib/theme-chalk/index.css';
 import router from "./router";
 import flexible from 'lib-flexible'
 <<<<<<< HEAD
+<<<<<<< HEAD
 // import 'lib-flexible/flexible.js'
 <<<<<<< HEAD
 
 =======
 import './assets/font_7ckfk617pvd/iconfont.css'
+>>>>>>> fenzhi2
+=======
+import './assets/font_7ckfk617pvd/iconfont.css'
+
+
 >>>>>>> fenzhi2
 =======
 import './assets/font_7ckfk617pvd/iconfont.css'

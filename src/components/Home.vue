@@ -3,18 +3,31 @@
        <div class="bigtop">
             <!-- 顶部 -->
         <div class="sou">
+<<<<<<< HEAD
             <van-icon name="search" color= "rgba(0, 0, 0, 1)" size=".653333rem" style=" margin: 8px 0 0 8px"/>
             <van-icon name="shopping-cart-o" color= "rgba(0, 0, 0, 1)" size=".653333rem" style="float: right; margin: 8px 8px 0 0;"/>
+=======
+            <van-icon @click="sou" name="search" color= "rgba(0, 0, 0, 1)" size=".653333rem" style=" margin: 8px 0 0 8px"/>
+            <van-icon @click="gotocart" name="shopping-cart-o" color= "rgba(0, 0, 0, 1)" size=".653333rem" style="float: right; margin: 8px 8px 0 0;"/>
+>>>>>>> fenzhi2
         </div>
         <!-- 手动轮播 -->
         <van-swipe @change="onChange" class="van_s">
         <van-swipe-item v-for="(item,idx) in imgs" :key="idx">
             <img class="Img" :src="item" alt="">
+<<<<<<< HEAD
             </van-swipe-item>
         </van-swipe>
         <!-- 图片加载数量 -->
        <div  class="custom-indicator" slot="indicator">
          {{ current + 1 }}/4
+=======
+        </van-swipe-item>
+        </van-swipe>
+        <!-- 图片加载数量 -->
+       <div  class="custom-indicator" slot="indicator">
+         <span>{{ current + 1 }}</span>/4
+>>>>>>> fenzhi2
        </div>
        </div>
        <!-- NEW ARRIVAL -->
@@ -23,8 +36,13 @@
            <div class="a_content">
                <div class="a_con">
                    <div class="aitems">
+<<<<<<< HEAD
                        <div class="a_item" v-for="(aitem,idx) in arrivals"  :key="idx">
                        <img :src="aitem.arimgs" alt="">
+=======
+                       <div class="a_item" @click="gotogoods(aitem.id)" v-for="(aitem) in listgoods"  :key="aitem.id">
+                       <img :src="aitem.featureImage" alt="">
+>>>>>>> fenzhi2
                        <p>{{aitem.name}}</p>
                       </div>
                    </div>
@@ -52,12 +70,18 @@
        <div class="foot">
            <img :src="fotimg" alt="">
        </div>
+<<<<<<< HEAD
 <!--  -->
+=======
+>>>>>>> fenzhi2
      </div>
 </template>
 <script>
 import Vue from "vue";
+<<<<<<< HEAD
 import Vant from "vant";
+=======
+>>>>>>> fenzhi2
 import "vant/lib/index.css";
 import { Swipe, SwipeItem } from "vant";
 Vue.use(Swipe).use(SwipeItem);
@@ -74,6 +98,7 @@ export default {
         require("../assets/banrun/b19c2bc0796cdbe30ec56a0625c9635d.jpg"),
         require("../assets/banrun/c534a78bfdcc088284f3cacedf17c851.jpg")
       ],
+<<<<<<< HEAD
       arrivals: [
         {
           name: "JEWELVARY",
@@ -96,6 +121,8 @@ export default {
           arimgs: require("../assets/goodrun/20190314151847244021.jpg@4e_0o_0l_345h_330w_90q.jpg")
         }
       ],
+=======
+>>>>>>> fenzhi2
       ticket_img: require("../assets/69c1c3a193c7b53d0b0de1b97561b717.jpg"),
       cilcen: [
         {
@@ -176,14 +203,43 @@ export default {
         require("../assets/d7275cf4bcfc62a5fab460ecd5c68a19.jpg@0o_0l_750w_90q.jpg"),
         require("../assets/c9e8398df7d9be8d5c07a93554e35b4f.jpg@0o_0l_750w_90q.jpg")
       ],
+<<<<<<< HEAD
       fotimg:require("../assets/19b3af48d4f1fe9f4eb85ad4a1f9bc30.jpg@0o_0l_750w_90q.jpg")
+=======
+      fotimg: require("../assets/19b3af48d4f1fe9f4eb85ad4a1f9bc30.jpg@0o_0l_750w_90q.jpg"),
+      listgoods:{}
+>>>>>>> fenzhi2
     };
   },
   methods: {
     onChange(index) {
       this.current = index;
+<<<<<<< HEAD
     }
   }
+=======
+    },
+    sou() {
+      this.$router.push("/xuan");
+    },
+    gotocart() {
+      this.$router.push("/cart");
+    }
+    ,
+    gotogoods(id){
+      this.$router.push({name:'Goods',query:{id},params:{id}});
+    }
+  },
+  created(){
+    this.$axios.post("http://localhost:1817/listers",{
+       title: "推荐"
+    })
+     .then(res => {
+        this.listgoods=res.data.arr;
+    });
+  }
+
+>>>>>>> fenzhi2
 };
 </script>
 <style lang="scss" scoped>
@@ -199,7 +255,10 @@ export default {
 }
 .van_s {
   height: 13.333333rem;
+<<<<<<< HEAD
 
+=======
+>>>>>>> fenzhi2
   .van-swipe-item {
     width: 100%;
     height: 100%;
@@ -211,10 +270,21 @@ export default {
 }
 .custom-indicator {
   position: relative;
+<<<<<<< HEAD
   top: -50px;
   right: -85%;
   width: 80px;
   color: #fff;
+=======
+  top: -90px;
+  right: -86%;
+  width: 80px;
+  color: #fff;
+  font-weight: bold;
+  span{
+    font-size: .6rem;
+  }
+>>>>>>> fenzhi2
 }
 .arrival {
   height: 4.853333rem;
@@ -243,11 +313,19 @@ export default {
         text-align: center;
         .a_item {
           display: inline-block;
+<<<<<<< HEAD
           width: 2.933333333333333rem;
           margin-right: 0.053333333333333rem;
           overflow: hidden;
           img {
             width: 100%;
+=======
+          width: 3.8rem;
+          margin-right: 0.053333333333333rem;
+          overflow: hidden;
+          img {
+            width: 3.333333rem;
+>>>>>>> fenzhi2
             height: 3.066667rem;
           }
         }
@@ -281,6 +359,7 @@ export default {
       position: absolute;
       z-index: 2;
       top: 0;
+<<<<<<< HEAD
       p{
           font-size: .4rem;
           color: #fff;
@@ -294,12 +373,28 @@ export default {
           position: absolute;
           top:40px;
           left: 0;
+=======
+      p {
+        font-size: 0.4rem;
+        color: #fff;
+        font-weight: bold;
+      }
+      span {
+        width: 0.266667rem;
+        height: 0.4rem;
+        background: #fff;
+        display: inline-block;
+        position: absolute;
+        top: 40px;
+        left: 0;
+>>>>>>> fenzhi2
       }
     }
   }
 }
 .brand {
   overflow: hidden;
+<<<<<<< HEAD
   img{
       width: 100%;
   }
@@ -310,6 +405,18 @@ export default {
     img{
        width: 100%;
     }
+=======
+  img {
+    width: 100%;
+  }
+}
+.foot {
+  width: 100%;
+  overflow: hidden;
+  img {
+    width: 100%;
+  }
+>>>>>>> fenzhi2
 }
 </style>
 

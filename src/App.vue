@@ -1,10 +1,16 @@
 <template>
   <div id="app">
 <<<<<<< HEAD
+<<<<<<< HEAD
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <HelloWorld msg="Welcome to Your Vue.js App"/>
 =======
      <router-view class="main"></router-view>
+=======
+     <router-view class="main">
+       
+     </router-view>
+>>>>>>> fenzhi2
   <footer>
     <nav>
 <<<<<<< HEAD
@@ -38,14 +44,31 @@ import "element-ui/lib/theme-chalk/index.css";
 =======
 // import Vue from "vue";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import "element-ui/lib/theme-chalk/index.css";
 // import "assets/download/font_7ckfk617pvd/iconfont.css";
 >>>>>>> fenzhi2
 =======
+=======
+>>>>>>> fenzhi2
 // import Vant from "vant";
 
 // import "vant/lib/index.css";
 // Vue.use(Vant);
+<<<<<<< HEAD
+>>>>>>> fenzhi2
+=======
+
+import Vue from 'vue';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+// ElementUI以插件的形式来扩展Vue的功能
+Vue.use(ElementUI);
+import VueResource from "vue-resource";
+Vue.use(VueResource);
+import axios from "axios";
+// 把axios设置到Vue的原型对象上，方便在任意组件中使用
+Vue.prototype.$axios = axios;
 >>>>>>> fenzhi2
 
 export default {
@@ -134,7 +157,7 @@ body {
     overflow: auto;
   }
   footer {
-    background: pink;
+    background: #fff;
     height: 1.333333rem;
     nav {
       height: 1.333333rem;
@@ -148,12 +171,17 @@ body {
         flex: 1;
         color: #a7a7a7;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         i{
            font-size: .626667rem;
+=======
+        i {
+          font-size: 0.626667rem;
+>>>>>>> fenzhi2
         }
-        span{
-          font-size: .24rem;
+        span {
+          font-size: 0.24rem;
         }
 >>>>>>> fenzhi2
       }
