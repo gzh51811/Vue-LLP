@@ -176,7 +176,7 @@ export default {
                   this.$router.push("/home");
                 }
               } else {
-                alert("登陆失败");
+                 this.$message.error('登陆失败，请重新输入');
               }
             });
         }
@@ -202,7 +202,7 @@ export default {
               //成功返回
               if (res.data == "no") {
                 // 保存用户名密
-                alert("邮箱已被占用，请重新输入");
+                 this.$message.error('邮箱已被占用，请重新输入');
               } else {
                 var prom = res.config.data;
                 var pr = JSON.parse(prom);
@@ -217,7 +217,7 @@ export default {
             });
           }
           else {
-            alert('验证码有误请重新输入');
+            this.$message.error('验证码有误请重新输入');
           }
         }
       });
