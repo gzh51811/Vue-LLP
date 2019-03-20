@@ -1,6 +1,28 @@
 <template>
   <div id="app">
 <<<<<<< HEAD
+
+    <router-view class="main"></router-view>
+    <footer >
+      <nav>
+   <li v-for="(nav) in navs" :key="nav.name" @click="goto(nav)">
+          <i :class="nav.i"></i>
+          <span  >{{nav.text}}</span>
+        </li>
+      </nav>
+    </footer>
+
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+
+     <router-view class="main"></router-view>
+
+     <router-view class="main">
+       
+     </router-view>
+
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
@@ -12,29 +34,56 @@
        
      </router-view>
 >>>>>>> fenzhi2
+<<<<<<< HEAD
 =======
      <router-view class="main">
        
      </router-view>
 >>>>>>> fenzhi2
+=======
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
+>>>>>>> b7dc83a0fc70974cc955fc19e333d9bd6df81ea3
   <footer>
     <nav>
-<<<<<<< HEAD
-      <li v-for="(nav) in navs" :key="nav.name" @click="goto(nav)">{{nav.text}}</li>
-=======
       <li v-for="(nav) in navs" :key="nav.name" @click="goto(nav)">
         <i :class="nav.i"></i>
         <span>{{nav.text}}</span>
         </li>
->>>>>>> fenzhi2
     </nav>
   </footer>
+<<<<<<< HEAD
+
+=======
 >>>>>>> 7d1efae37eda9581eb0212f471696d50446b4081
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
   </div>
 </template>
 
 <script>
-<<<<<<< HEAD
+
+// import Vue from "vue";
+import Vue from 'vue';
+import ElementUI from 'element-ui';
+import 'element-ui/lib/theme-chalk/index.css';
+
+import axios from "axios";
+
+// ElementUI以插件的形式来扩展Vue的功能
+Vue.use(ElementUI);
+
+// 把axios设置到Vue的原型对象上，方便在任意组件中使用
+Vue.prototype.$axios = axios;
+import "element-ui/lib/theme-chalk/index.css";
+// import "assets/download/font_7ckfk617pvd/iconfont.css";
+
+import HelloWorld from "./components/HelloWorld.vue";
+
+
+export default {
+  name: "app",
+  components: {
+    HelloWorld
+  }
 import HelloWorld from "./components/HelloWorld.vue";
 
 
@@ -47,8 +96,14 @@ export default {
 import HelloWorld from "./components/HelloWorld.vue";
 import Vue from "vue";
 import "element-ui/lib/theme-chalk/index.css";
-=======
+
 // import Vue from "vue";
+<<<<<<< HEAD
+
+import "element-ui/lib/theme-chalk/index.css";
+// import "assets/download/font_7ckfk617pvd/iconfont.css";
+
+=======
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -58,18 +113,31 @@ import "element-ui/lib/theme-chalk/index.css";
 =======
 =======
 >>>>>>> fenzhi2
+<<<<<<< HEAD
 =======
 >>>>>>> fenzhi2
+=======
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
+>>>>>>> b7dc83a0fc70974cc955fc19e333d9bd6df81ea3
 // import Vant from "vant";
 
 // import "vant/lib/index.css";
 // Vue.use(Vant);
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fenzhi2
 =======
 =======
 >>>>>>> fenzhi2
+=======
+
+=======
+<<<<<<< HEAD
+>>>>>>> fenzhi2
+=======
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
+>>>>>>> b7dc83a0fc70974cc955fc19e333d9bd6df81ea3
 
 import Vue from 'vue';
 import ElementUI from 'element-ui';
@@ -82,9 +150,13 @@ import axios from "axios";
 // 把axios设置到Vue的原型对象上，方便在任意组件中使用
 Vue.prototype.$axios = axios;
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fenzhi2
 =======
+>>>>>>> b7dc83a0fc70974cc955fc19e333d9bd6df81ea3
+=======
 >>>>>>> fenzhi2
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
 
 export default {
   data() {
@@ -92,35 +164,36 @@ export default {
       navs: [
         {
           text: "首页",
-<<<<<<< HEAD
-=======
           i: "iconfont icon-shouye",
->>>>>>> fenzhi2
-          name: "Home"
+          name: "Home",
+          meta: {
+            footShow: true // true显示，false隐藏
+          }
         },
         {
           text: "选购",
-<<<<<<< HEAD
-=======
           i: "iconfont icon-liebiaoxuanze-",
->>>>>>> fenzhi2
-          name: "Xuan"
+          img: "",
+          name: "Xuan",
+          meta: {
+            footShow: true // true显示，false隐藏
+          }
         },
         {
           text: "购物车",
-<<<<<<< HEAD
-=======
           i: "iconfont icon-gouwuche",
->>>>>>> fenzhi2
-          name: "Cart"
+          name: "Cart",
+          meta: {
+            footShow: false // true显示，false隐藏
+          }
         },
         {
           text: "我的",
-<<<<<<< HEAD
-=======
           i: "iconfont icon-wode",
->>>>>>> fenzhi2
-          name: "Login"
+          name: "Login",
+          meta: {
+            footShow: false // true显示，false隐藏
+          }
         }
       ],
       activeIndex: 0
@@ -134,7 +207,11 @@ export default {
       //$router.push方法切换组件页面
       this.$router.push({ name: nav.name });
     }
+<<<<<<< HEAD
+
+=======
 >>>>>>> 7d1efae37eda9581eb0212f471696d50446b4081
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
   }
 };
 </script>
@@ -143,12 +220,21 @@ export default {
 <style>
 =======
 <style lang="scss">
+<<<<<<< HEAD
+@import "assets/font_7ckfk617pvd/iconfont.css";
+
+=======
 >>>>>>> 7d1efae37eda9581eb0212f471696d50446b4081
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
 * {
   margin: 0;
   padding: 0;
 }
 <<<<<<< HEAD
+
+=======
+<<<<<<< HEAD
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -156,7 +242,11 @@ export default {
   text-align: center;
   color: #2c3e50;
 
+<<<<<<< HEAD
+
 =======
+=======
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
 html,
 body {
   height: 100%;
@@ -164,6 +254,7 @@ body {
 #app {
   width: 100%;
   height: 100%;
+ flex: 1;
   display: flex;
   flex-direction: column;
   .main {
@@ -174,6 +265,7 @@ body {
   footer {
     background: #fff;
     height: 1.333333rem;
+    border-top: 1px solid #e6e7e8;
     nav {
       height: 1.333333rem;
       display: flex;
@@ -186,6 +278,18 @@ body {
         flex: 1;
         color: #a7a7a7;
 <<<<<<< HEAD
+
+        i {
+          height: 0.666667rem;
+          font-size: 0.626667rem;
+
+        i{
+           font-size: .626667rem;
+
+        i {
+          font-size: 0.626667rem;
+=======
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 =======
@@ -195,15 +299,18 @@ body {
         i {
           font-size: 0.626667rem;
 >>>>>>> fenzhi2
+<<<<<<< HEAD
 =======
         i {
           font-size: 0.626667rem;
 >>>>>>> fenzhi2
+=======
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
+>>>>>>> b7dc83a0fc70974cc955fc19e333d9bd6df81ea3
         }
         span {
           font-size: 0.24rem;
         }
->>>>>>> fenzhi2
       }
     }
   }

@@ -5,7 +5,6 @@
 //  */
 import Vue from 'vue';
 import VueRouter from 'vue-router';
-
 import Home from '../components/Home.vue'
 import Xuan from '../components/Xuan.vue'
 import Goods from '../components/Goods.vue'
@@ -13,10 +12,13 @@ import Cart from '../components/Cart.vue'
 import NotFound from '../components/NotFound.vue'
 import Login from '../components/Login.vue'
 import Aianding from "../components/Aianding.vue";
+<<<<<<< HEAD
+import List from '../components/List.vue'
+=======
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
 // import Discover from "../components/discover.vue";
 
 Vue.use(VueRouter);
-
 let router = new VueRouter({
      mode:'history',
     routes: [
@@ -34,6 +36,11 @@ let router = new VueRouter({
             name: 'Xuan',
             path: '/xuan',
             component: Xuan
+        },
+        {
+            name: 'List',
+            path: '/list',
+            component: List,
         },
         {
             name: 'Cart',
@@ -113,5 +120,6 @@ router.beforeEach((to, from, next) => {
         next();
     }
 });
+
 
 export default router;

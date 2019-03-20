@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div>
        <div class="bigtop">
             <!-- 顶部 -->
@@ -484,3 +485,12 @@ export default {
 </style>
 
 
+=======
+    <div>首页</div>
+</template>
+<script>
+export default {
+    
+}
+</script>
+>>>>>>> b7dc83a0fc70974cc955fc19e333d9bd6df81ea3

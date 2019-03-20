@@ -1,4 +1,5 @@
 <template>
+<<<<<<< HEAD
     <div>
 <<<<<<< HEAD
 <<<<<<< HEAD
@@ -9,10 +10,13 @@
             </div>
         </div>
     </div>
+=======
+    <div>登陆</div>
+>>>>>>> b7dc83a0fc70974cc955fc19e333d9bd6df81ea3
 </template>
 <script>
-// import Vue from "vue";
 export default {
+<<<<<<< HEAD
   data() {
     return {
       logimg: require("../assets/loginimg.png")
@@ -463,6 +467,8 @@ export default {
 .captcha{
   height:50px;
   text-align: justify;
+=======
+    
+>>>>>>> b7dc83a0fc70974cc955fc19e333d9bd6df81ea3
 }
->>>>>>> fenzhi2
-</style>
+</script>
