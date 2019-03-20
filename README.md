@@ -1,29 +1,29 @@
-# lmvue
+# 项目名称：
 
-## Project setup
-```
-npm install
-```
+野兽派app
 
-### Compiles and hot-reloads for development
+### 项目成员：
 ```
-npm run serve
+凌小连&卜锦梅&卢连敏
 ```
 
-### Compiles and minifies for production
+### 使用技术：
 ```
-npm run build
-```
-
-### Run your tests
-```
-npm run test
+UI框架：Elment、Vant
+语言：Vue、Nodejs
+数据库：MongoDB
 ```
 
-### Lints and fixes files
-```
-npm run lint
+### 演示地址：
 ```
 
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).
+```
+
+### 项目文件结构：
+```
+
+```
+
+
+
+### 模块划分：
