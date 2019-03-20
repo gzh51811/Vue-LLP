@@ -12,7 +12,10 @@ import Cart from '../components/Cart.vue'
 import NotFound from '../components/NotFound.vue'
 import Login from '../components/Login.vue'
 import Aianding from "../components/Aianding.vue";
+<<<<<<< HEAD
 import List from '../components/List.vue'
+=======
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
 // import Discover from "../components/discover.vue";
 
 Vue.use(VueRouter);

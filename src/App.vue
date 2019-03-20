@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+<<<<<<< HEAD
 
     <router-view class="main"></router-view>
     <footer >
@@ -20,6 +21,19 @@
        
      </router-view>
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+    <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
+    <HelloWorld msg="Welcome to Your Vue.js App"/>
+=======
+     <router-view class="main"></router-view>
+=======
+     <router-view class="main">
+       
+     </router-view>
+>>>>>>> fenzhi2
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
   <footer>
     <nav>
       <li v-for="(nav) in navs" :key="nav.name" @click="goto(nav)">
@@ -28,7 +42,11 @@
         </li>
     </nav>
   </footer>
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7d1efae37eda9581eb0212f471696d50446b4081
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
   </div>
 </template>
 
@@ -58,19 +76,45 @@ export default {
     HelloWorld
   }
 import HelloWorld from "./components/HelloWorld.vue";
+
+
+export default {
+  name: "app",
+  components: {
+    HelloWorld
+=======
+<<<<<<< HEAD
+import HelloWorld from "./components/HelloWorld.vue";
 import Vue from "vue";
 import "element-ui/lib/theme-chalk/index.css";
 
 // import Vue from "vue";
+<<<<<<< HEAD
 
 import "element-ui/lib/theme-chalk/index.css";
 // import "assets/download/font_7ckfk617pvd/iconfont.css";
 
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+import "element-ui/lib/theme-chalk/index.css";
+// import "assets/download/font_7ckfk617pvd/iconfont.css";
+>>>>>>> fenzhi2
+=======
+=======
+>>>>>>> fenzhi2
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
 // import Vant from "vant";
 
 // import "vant/lib/index.css";
 // Vue.use(Vant);
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> fenzhi2
+=======
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
 
 import Vue from 'vue';
 import ElementUI from 'element-ui';
@@ -82,6 +126,10 @@ Vue.use(VueResource);
 import axios from "axios";
 // 把axios设置到Vue的原型对象上，方便在任意组件中使用
 Vue.prototype.$axios = axios;
+<<<<<<< HEAD
+=======
+>>>>>>> fenzhi2
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
 
 export default {
   data() {
@@ -132,19 +180,34 @@ export default {
       //$router.push方法切换组件页面
       this.$router.push({ name: nav.name });
     }
+<<<<<<< HEAD
 
+=======
+>>>>>>> 7d1efae37eda9581eb0212f471696d50446b4081
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
   }
 };
 </script>
 
+<<<<<<< HEAD
+<style>
+=======
 <style lang="scss">
+<<<<<<< HEAD
 @import "assets/font_7ckfk617pvd/iconfont.css";
 
+=======
+>>>>>>> 7d1efae37eda9581eb0212f471696d50446b4081
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
 * {
   margin: 0;
   padding: 0;
 }
+<<<<<<< HEAD
 
+=======
+<<<<<<< HEAD
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
 #app {
   font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -152,7 +215,11 @@ export default {
   text-align: center;
   color: #2c3e50;
 
+<<<<<<< HEAD
 
+=======
+=======
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
 html,
 body {
   height: 100%;
@@ -183,6 +250,7 @@ body {
         text-align: center;
         flex: 1;
         color: #a7a7a7;
+<<<<<<< HEAD
 
         i {
           height: 0.666667rem;
@@ -193,6 +261,17 @@ body {
 
         i {
           font-size: 0.626667rem;
+=======
+<<<<<<< HEAD
+<<<<<<< HEAD
+=======
+        i{
+           font-size: .626667rem;
+=======
+        i {
+          font-size: 0.626667rem;
+>>>>>>> fenzhi2
+>>>>>>> ce5d016ac861c22b64c82360d871894d90b47715
         }
         span {
           font-size: 0.24rem;
@@ -200,5 +279,6 @@ body {
       }
     }
   }
+>>>>>>> 7d1efae37eda9581eb0212f471696d50446b4081
 }
 </style>
