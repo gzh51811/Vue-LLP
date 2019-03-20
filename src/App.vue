@@ -2,10 +2,16 @@
   <div id="app">
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
     <!-- <img alt="Vue logo" src="./assets/logo.png"> -->
     <HelloWorld msg="Welcome to Your Vue.js App"/>
 =======
      <router-view class="main"></router-view>
+=======
+     <router-view class="main">
+       
+     </router-view>
+>>>>>>> fenzhi2
 =======
      <router-view class="main">
        
@@ -45,10 +51,13 @@ import "element-ui/lib/theme-chalk/index.css";
 // import Vue from "vue";
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 import "element-ui/lib/theme-chalk/index.css";
 // import "assets/download/font_7ckfk617pvd/iconfont.css";
 >>>>>>> fenzhi2
 =======
+=======
+>>>>>>> fenzhi2
 =======
 >>>>>>> fenzhi2
 // import Vant from "vant";
@@ -56,8 +65,11 @@ import "element-ui/lib/theme-chalk/index.css";
 // import "vant/lib/index.css";
 // Vue.use(Vant);
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> fenzhi2
 =======
+=======
+>>>>>>> fenzhi2
 
 import Vue from 'vue';
 import ElementUI from 'element-ui';
@@ -69,6 +81,9 @@ Vue.use(VueResource);
 import axios from "axios";
 // 把axios设置到Vue的原型对象上，方便在任意组件中使用
 Vue.prototype.$axios = axios;
+<<<<<<< HEAD
+>>>>>>> fenzhi2
+=======
 >>>>>>> fenzhi2
 
 export default {
@@ -172,9 +187,14 @@ body {
         color: #a7a7a7;
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
         i{
            font-size: .626667rem;
+=======
+        i {
+          font-size: 0.626667rem;
+>>>>>>> fenzhi2
 =======
         i {
           font-size: 0.626667rem;

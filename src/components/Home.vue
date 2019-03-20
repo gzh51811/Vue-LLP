@@ -4,8 +4,13 @@
             <!-- 顶部 -->
         <div class="sou">
 <<<<<<< HEAD
+<<<<<<< HEAD
             <van-icon name="search" color= "rgba(0, 0, 0, 1)" size=".653333rem" style=" margin: 8px 0 0 8px"/>
             <van-icon name="shopping-cart-o" color= "rgba(0, 0, 0, 1)" size=".653333rem" style="float: right; margin: 8px 8px 0 0;"/>
+=======
+            <van-icon @click="sou" name="search" color= "rgba(0, 0, 0, 1)" size=".653333rem" style=" margin: 8px 0 0 8px"/>
+            <van-icon @click="gotocart" name="shopping-cart-o" color= "rgba(0, 0, 0, 1)" size=".653333rem" style="float: right; margin: 8px 8px 0 0;"/>
+>>>>>>> fenzhi2
 =======
             <van-icon @click="sou" name="search" color= "rgba(0, 0, 0, 1)" size=".653333rem" style=" margin: 8px 0 0 8px"/>
             <van-icon @click="gotocart" name="shopping-cart-o" color= "rgba(0, 0, 0, 1)" size=".653333rem" style="float: right; margin: 8px 8px 0 0;"/>
@@ -16,17 +21,23 @@
         <van-swipe-item v-for="(item,idx) in imgs" :key="idx">
             <img class="Img" :src="item" alt="">
 <<<<<<< HEAD
+<<<<<<< HEAD
             </van-swipe-item>
         </van-swipe>
         <!-- 图片加载数量 -->
        <div  class="custom-indicator" slot="indicator">
          {{ current + 1 }}/4
 =======
+=======
+>>>>>>> fenzhi2
         </van-swipe-item>
         </van-swipe>
         <!-- 图片加载数量 -->
        <div  class="custom-indicator" slot="indicator">
          <span>{{ current + 1 }}</span>/4
+<<<<<<< HEAD
+>>>>>>> fenzhi2
+=======
 >>>>>>> fenzhi2
        </div>
        </div>
@@ -37,8 +48,13 @@
                <div class="a_con">
                    <div class="aitems">
 <<<<<<< HEAD
+<<<<<<< HEAD
                        <div class="a_item" v-for="(aitem,idx) in arrivals"  :key="idx">
                        <img :src="aitem.arimgs" alt="">
+=======
+                       <div class="a_item" @click="gotogoods(aitem.id)" v-for="(aitem) in listgoods"  :key="aitem.id">
+                       <img :src="aitem.featureImage" alt="">
+>>>>>>> fenzhi2
 =======
                        <div class="a_item" @click="gotogoods(aitem.id)" v-for="(aitem) in listgoods"  :key="aitem.id">
                        <img :src="aitem.featureImage" alt="">
@@ -71,7 +87,10 @@
            <img :src="fotimg" alt="">
        </div>
 <<<<<<< HEAD
+<<<<<<< HEAD
 <!--  -->
+=======
+>>>>>>> fenzhi2
 =======
 >>>>>>> fenzhi2
      </div>
@@ -79,7 +98,10 @@
 <script>
 import Vue from "vue";
 <<<<<<< HEAD
+<<<<<<< HEAD
 import Vant from "vant";
+=======
+>>>>>>> fenzhi2
 =======
 >>>>>>> fenzhi2
 import "vant/lib/index.css";
@@ -98,6 +120,7 @@ export default {
         require("../assets/banrun/b19c2bc0796cdbe30ec56a0625c9635d.jpg"),
         require("../assets/banrun/c534a78bfdcc088284f3cacedf17c851.jpg")
       ],
+<<<<<<< HEAD
 <<<<<<< HEAD
       arrivals: [
         {
@@ -121,6 +144,8 @@ export default {
           arimgs: require("../assets/goodrun/20190314151847244021.jpg@4e_0o_0l_345h_330w_90q.jpg")
         }
       ],
+=======
+>>>>>>> fenzhi2
 =======
 >>>>>>> fenzhi2
       ticket_img: require("../assets/69c1c3a193c7b53d0b0de1b97561b717.jpg"),
@@ -204,7 +229,12 @@ export default {
         require("../assets/c9e8398df7d9be8d5c07a93554e35b4f.jpg@0o_0l_750w_90q.jpg")
       ],
 <<<<<<< HEAD
+<<<<<<< HEAD
       fotimg:require("../assets/19b3af48d4f1fe9f4eb85ad4a1f9bc30.jpg@0o_0l_750w_90q.jpg")
+=======
+      fotimg: require("../assets/19b3af48d4f1fe9f4eb85ad4a1f9bc30.jpg@0o_0l_750w_90q.jpg"),
+      listgoods:{}
+>>>>>>> fenzhi2
 =======
       fotimg: require("../assets/19b3af48d4f1fe9f4eb85ad4a1f9bc30.jpg@0o_0l_750w_90q.jpg"),
       listgoods:{}
@@ -215,9 +245,12 @@ export default {
     onChange(index) {
       this.current = index;
 <<<<<<< HEAD
+<<<<<<< HEAD
     }
   }
 =======
+=======
+>>>>>>> fenzhi2
     },
     sou() {
       this.$router.push("/xuan");
@@ -239,6 +272,9 @@ export default {
     });
   }
 
+<<<<<<< HEAD
+>>>>>>> fenzhi2
+=======
 >>>>>>> fenzhi2
 };
 </script>
@@ -256,7 +292,10 @@ export default {
 .van_s {
   height: 13.333333rem;
 <<<<<<< HEAD
+<<<<<<< HEAD
 
+=======
+>>>>>>> fenzhi2
 =======
 >>>>>>> fenzhi2
   .van-swipe-item {
@@ -271,11 +310,14 @@ export default {
 .custom-indicator {
   position: relative;
 <<<<<<< HEAD
+<<<<<<< HEAD
   top: -50px;
   right: -85%;
   width: 80px;
   color: #fff;
 =======
+=======
+>>>>>>> fenzhi2
   top: -90px;
   right: -86%;
   width: 80px;
@@ -284,6 +326,9 @@ export default {
   span{
     font-size: .6rem;
   }
+<<<<<<< HEAD
+>>>>>>> fenzhi2
+=======
 >>>>>>> fenzhi2
 }
 .arrival {
@@ -314,17 +359,23 @@ export default {
         .a_item {
           display: inline-block;
 <<<<<<< HEAD
+<<<<<<< HEAD
           width: 2.933333333333333rem;
           margin-right: 0.053333333333333rem;
           overflow: hidden;
           img {
             width: 100%;
 =======
+=======
+>>>>>>> fenzhi2
           width: 3.8rem;
           margin-right: 0.053333333333333rem;
           overflow: hidden;
           img {
             width: 3.333333rem;
+<<<<<<< HEAD
+>>>>>>> fenzhi2
+=======
 >>>>>>> fenzhi2
             height: 3.066667rem;
           }
@@ -360,6 +411,7 @@ export default {
       z-index: 2;
       top: 0;
 <<<<<<< HEAD
+<<<<<<< HEAD
       p{
           font-size: .4rem;
           color: #fff;
@@ -374,6 +426,8 @@ export default {
           top:40px;
           left: 0;
 =======
+=======
+>>>>>>> fenzhi2
       p {
         font-size: 0.4rem;
         color: #fff;
@@ -387,6 +441,9 @@ export default {
         position: absolute;
         top: 40px;
         left: 0;
+<<<<<<< HEAD
+>>>>>>> fenzhi2
+=======
 >>>>>>> fenzhi2
       }
     }
@@ -394,6 +451,7 @@ export default {
 }
 .brand {
   overflow: hidden;
+<<<<<<< HEAD
 <<<<<<< HEAD
   img{
       width: 100%;
@@ -406,6 +464,8 @@ export default {
        width: 100%;
     }
 =======
+=======
+>>>>>>> fenzhi2
   img {
     width: 100%;
   }
@@ -416,6 +476,9 @@ export default {
   img {
     width: 100%;
   }
+<<<<<<< HEAD
+>>>>>>> fenzhi2
+=======
 >>>>>>> fenzhi2
 }
 </style>
